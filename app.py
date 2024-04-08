@@ -1,11 +1,11 @@
-from  flask import Flask, request, jsonify
+from  flask import Flask, request, jsonify,render_template
 from aqi_predict import predict_aqi
 
-app = Flask(__name__)
+app = Flask(__name__,template_folder='template')
 
 @app.route('/')
-def home():
-    return(index.html)
+def index():
+    return render_template('index.html')
 
 @app.route('/tryit/<int:var>',methods=['GET'])
 def tryit(var):
