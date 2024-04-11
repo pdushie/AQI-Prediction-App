@@ -17,5 +17,8 @@ def predict_aqi(no2_value, o3_value,so2_value,co_value):
 
 print(predict_aqi(34.041667,0.0225 , 3, 1.145833))
 
+print("Enter a number")
+input("Number:")
+
 #print("Version: ",pickle.format_version)
 #print('The scikit-learn version is {}.'.format(sklearn.__version__))
