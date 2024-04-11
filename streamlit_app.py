@@ -1,4 +1,3 @@
-%pip install bz2file
 import pickle
 import bz2file as bz2
 
