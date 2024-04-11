@@ -1,5 +1,5 @@
 from  flask import Flask, request, jsonify,render_template
-#from streamlit_app.py import predict_aqi
+#from aqi_predict.py import predict_aqi
 import pickle
 import bz2file as bz2
 import sklearn
