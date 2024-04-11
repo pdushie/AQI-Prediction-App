@@ -1,5 +1,5 @@
 from  flask import Flask, request, jsonify,render_template
-from aqi_predict import predict_aqi
+from streamlit_app.py import predict_aqi
 
 app = Flask(__name__,template_folder='template')
 
