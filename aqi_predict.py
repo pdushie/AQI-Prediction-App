@@ -1,5 +1,4 @@
 from  flask import Flask, request, jsonify,render_template
-from aqi_predict.py import predict_aqi
 import pickle
 import bz2file as bz2
 import sklearn
