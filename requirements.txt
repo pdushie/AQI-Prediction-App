@@ -1,2 +1,2 @@
 bz2file
-sklearn
+sklearn==1.2.2
