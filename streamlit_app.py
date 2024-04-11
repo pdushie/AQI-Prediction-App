@@ -8,7 +8,7 @@ def decompress_pickle(file):
     data = pickle.load(data)
     return data
 
-model = decompress_pickle('/aqi_dt_comp.pbz2')
+model = decompress_pickle('aqi_dt_comp.pbz2')
 
 def predict_aqi(no2_value, o3_value,so2_value,co_value):
     
