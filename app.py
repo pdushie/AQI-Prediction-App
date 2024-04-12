@@ -14,11 +14,11 @@ def tryit(var):
 @app.route('/predict/', methods=['POST'])
 def predict():
     data = request.get_json()
-    x=data.get("x")
-    y=data.get("y")
-    z=data.get("z")
-    w=data.get("w")
-    result = predict_aqi(x,y,z,w)
+    NO2=data.get("no2_value")
+    O3=data.get("o3_value")
+    SO2=data.get("so2_value")
+    CO=data.get("co_value")
+    result = predict_aqi(NO2,O3,SO2,CO)
     return {'Result': result}
 
 if __name__ == '__main__':
