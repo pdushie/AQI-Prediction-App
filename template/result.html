@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQI Prediction Result</title>
+    <style>
+        .aqi-value {
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .green-bg {
+            background-color: #00FF00; /* Green */
+        }
+
+        .yellow-bg {
+            background-color: #FFFF00; /* Yellow */
+        }
+
+        .orange-bg {
+            background-color: #FFA500; /* Orange */
+        }
+
+        .red-bg {
+            background-color: #FF0000; /* Red */
+        }
+
+        .purple-bg {
+            background-color: #800080; /* Purple */
+        }
+
+        .brown-bg {
+            background-color: #A52A2A; /* Brown */
+        }
+    </style>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
+        >
+
+        
+</head>
+<body>
+    <div class="box" style="width: fit-content; margin-left: auto; margin-right: auto;">
+    <h1 class="title">AQI Prediction Result</h1>
+    <p>Mean NO2: {{ NO2 }}</p>
+    <p>Mean O3: {{ O3 }}</p>
+    <p>Mean SO2: {{ SO2 }}</p>
+    <p>Mean CO: {{ CO }}</p>
+    <div class="aqi-value 
+                {% if result >= 0 and result <= 50 %} green-bg 
+                {% elif result >= 51 and result <= 100 %} yellow-bg 
+                {% elif result >= 101 and result <= 150 %} orange-bg 
+                {% elif result >= 151 and result <= 200 %} red-bg 
+                {% elif result >= 201 and result <= 300 %} purple-bg 
+                {% else %} brown-bg {% endif %}" style="width:max-content">
+        Predicted AQI: {{ result }}
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
