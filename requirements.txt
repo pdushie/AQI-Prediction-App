@@ -3,3 +3,4 @@ scikit-learn==1.2.2
 flask
 pyzmq==17.0.0
 ipykernel==4.8.2
+Gunicorn
