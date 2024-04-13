@@ -11,15 +11,25 @@ def index():
 def tryit(var):
     return({"Result":var})
 
+@app.route('/json_predict/', methods=['POST'])
+def json_predict():
+    data = request.get_json()
+    NO2=data.get("no2_value")
+    O3=data.get("o3_value")
+    SO2=data.get("so2_value")
+    CO=data.get("co_value")
+    result = predict_aqi(NO2,O3,SO2,CO)
+    return {'result':result}
+
 @app.route('/predict/', methods=['POST'])
 def predict():
-    data = request.get_json()
-    NO2=request.form.get("no2_value")
-    O3=request.form.get("o3_value")
-    SO2=request.form.get("so2_value")
-    CO=request.form.get("co_value")
+    #data = request.get_json()
+    NO2=float(request.form.get("no2_value"))
+    O3=float(request.form.get("o3_value"))
+    SO2=float(request.form.get("so2_value"))
+    CO=float(request.form.get("co_value"))
     result = predict_aqi(NO2,O3,SO2,CO)
-    return {'Result': result}
+    return {'NO2':NO2,'O3':O3,'SO2':SO2,'CO':CO,'result':result}
 
 if __name__ == '__main__':
     app.run(debug=True)
