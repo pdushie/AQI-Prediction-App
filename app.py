@@ -13,7 +13,7 @@ def tryit(var):
 
 @app.route('/predict/', methods=['POST'])
 def predict():
-    #data = request.get_json()
+    data = request.get_json()
     NO2=request.form.get("no2_value")
     O3=request.form.get("o3_value")
     SO2=request.form.get("so2_value")
