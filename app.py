@@ -28,8 +28,8 @@ def predict():
     O3=float(request.form.get("o3_value"))
     SO2=float(request.form.get("so2_value"))
     CO=float(request.form.get("co_value"))
-    result = predict_aqi(NO2,O3,SO2,CO)
-    return {'NO2':NO2,'O3':O3,'SO2':SO2,'CO':CO,'result':result}
+    result = predict_aqi(NO2,SO2,O3,CO)
+    return {'result':result}
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,22 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AQI Predictor</title>
-</head>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Air Quality Predictor</title>
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
+        >
+    </head>
 <body>
-    <div>
-        <form action="https://crispy-potato-55xqw9xxxp5fv75g-5000.app.github.dev/predict/" method="post">
-        <input type="" placeholder="NO2 Mean Value" name="no2_value" step="0.000001"><br><p></p>
-        <input type="number" placeholder="SO2 Mean Value" name="so2_value" step="0.000001"><br><p></p>
-        <input type="number" placeholder="O3 Mean Value" name="o3_value" step="0.000001"><br><p></p>
-        <input type="number" placeholder="CO Mean Value" name="co_value" step="0.000001"><br><p></p>
-        <input type="submit" name="Submit">
-        </form>
 
-        
-    </div>
     
+    <div class="box" style="width:max-content; margin-left: auto; margin-right: auto;">
+        <div>
+            <h1 class="title is-1">Air Quality Index Predictor</h1>
+        </div>
+        
+    <div class="field" style="width:50cqmax;">
+        <form action="https://crispy-potato-55xqw9xxxp5fv75g-5000.app.github.dev/predict/" method="post" target="dummyframe">
+            <label class="label" for="no2_value">Mean NO2:</label>
+            <input class="input" type="number" placeholder="NO2 Value" name="no2_value" step="0.000001" min="0" max="999.999999"><br><p></p>
+            <label class="label" for="so2_value">Mean SO2:</label>
+            <input class="input" type="number" placeholder="SO2 Value" name="so2_value" step="0.000001" min="0" max="999.999999"><br><p></p>
+            <label class="label" for="o3_value">Mean O3:</label>
+            <input class="input" type="number" placeholder="O3 Value" name="o3_value" step="0.000001" min="0" max="999.999999"><br><p></p>
+            <label class="label" for="co_value">Mean CO:</label>
+            <input class="input" type="number" placeholder="CO Value" name="co_value" step="0.000001" min="0" max="999.999999"><br><p></p><br>
+            <input  class="button" type="submit" value="Submit">
+          </form>
+    </div>
+      </div>
+      
 </body>
 </html>
